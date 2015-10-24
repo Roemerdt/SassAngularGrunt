@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="ngclient">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="build/css/final.min.css">
+</head>
+<body>
+	
+	<!-- Optional Navbar -->
+	<div ng-include="'partials/header.html'"></div>
+	
+	<div class="body">
+		<div class="container">
+			<div ng-view></div>
+		</div>
+	</div>
+
+	<!-- Optional Footer -->
+	<div ng-include="'partials/footer.html'"></div>
+
+	<script src="dist/angular.js"></script>
+	<script src="dist/angular-route.js"></script>
+	<script src="build/js/app.js"></script>
+</body>
+</html>
