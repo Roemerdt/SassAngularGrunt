@@ -47,12 +47,21 @@ nav {
 	}
 
 	.nav {
+		min-height: 48px;
+		display: flex;
 
 		a {
+			display: flex;
+			align-items: center;
 			text-transform: uppercase;
 			font-size: 13px;
-			margin-right: 20px;
+			padding: 0px 10px;
 			color: white;
+			height: 48px;
+
+			&.active {
+				background: #787878;
+			}
 		}
 	}
 }

@@ -1,13 +1,21 @@
 module.exports = function(grunt) {
 
 	grunt.initConfig({
+		connect: {
+		    server: {
+		        options: {
+		      		port: 9000,
+		        	base: './'
+		      	}
+		    }
+		},
 		watch: {
 			sass: {
 				files: ['scss/*.scss'],
 				tasks: ['concat:scss', 'sass', 'postcss', 'cssmin']
 			},
 			js: {
-				files: ['js/*.js'],
+				files: ['js/*.js', 'dist/*.js'],
 				tasks: ['concat:js', 'uglify']
 			}
 		},
@@ -23,7 +31,7 @@ module.exports = function(grunt) {
 		},
 		concat: {
 			js: {
-				src: ['js/**/*.js'],
+				src: ['js/**/*.js', 'dist/**/*.js'],
 				dest: 'build/js/app.js'
 			},
 			scss: {
@@ -65,6 +73,6 @@ module.exports = function(grunt) {
 
 	require('load-grunt-tasks')(grunt);
 
-	grunt.registerTask('default', ['concat:scss', 'sass', 'postcss', 'cssmin', 'concat:js', 'uglify', 'watch']);
+	grunt.registerTask('default', ['connect', 'concat:scss', 'sass', 'postcss', 'cssmin', 'concat:js', 'uglify', 'watch']);
 
 };
