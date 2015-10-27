@@ -6,6 +6,7 @@ A directory structure to quick start your AngularJS project with Sass, powered b
   - Grunt concatenates your SCSS into CSS, and then autoprefixes and minifies it for you.
   - AngularJS is ready to go, with controllers and views setup for you.
 
+  <br>
 
   > The goal for SassAngularGrunt's project is to
   > make getting started with Sass and AngularJS as easy as possible with the help of Grunt.
